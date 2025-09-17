@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabbway Courier Service</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>🚚 Sabbway Courier Service</header>
+
+<div class="flip-stage">
+  <div id="flip" class="flip-container">
+
+    <!-- FRONT -->
+    <section class="panel front">
+      <h1>Track Your Package</h1>
+      <p class="subtitle">Enter your tracking number to view delivery progress</p>
+      <div class="form-wrap">
+        <form id="trackForm" onsubmit="return onSubmitTrack(event)">
+          <input id="trackingInput" type="text" placeholder="Enter Tracking Number" required>
+          <button class="btn" type="submit">Track Package</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- BACK -->
+    <section class="panel back">
+      <div class="track-head center">
+        <h1>Your Package is in Transit!</h1>
+        <p class="subtitle" style="margin-top:8px">Real-time delivery progress</p>
+      </div>
+
+      <div class="section">
+        <strong>Destination Address:</strong><br>
+        Chemin des Cerisiers 24 <br>
+        1208 Genf <br>
+        SCHWEIZ
+      </div>
+
+      <div class="center"><div class="moving-button">In Transit...</div></div>
+
+      <div class="section current-location">
+        <strong>Package is currently in:</strong> <span id="locationText">Ghana</span>
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="detailsBtn" onclick="toggleDetails()">See Package Details</button>
+      </div>
+
+      <div id="details" class="details">
+        <div class="detail-card"><div class="icon">📦</div><div class="card-content"><strong>Weight : </strong> 94kg</div></div>
+        <div class="detail-card"><div class="icon">📝</div><div class="card-content"><strong>Description : </strong> 92kg of Gold bars + 2kg safe box = 94kg total</div></div>
+        <div class="detail-card"><div class="icon">🏠</div><div class="card-content"><strong>Recipient Address : </strong>Chemin des Cerisiers 24<br>1208 Genf<br>SCHWEIZ</div></div>
+        <div class="detail-card"><div class="icon">🚚</div><div class="card-content"><strong>Sender / Billing Address : </strong>124 HOSPITAL ROAD<br>TEMA, 00233<br>Ghana</div></div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
